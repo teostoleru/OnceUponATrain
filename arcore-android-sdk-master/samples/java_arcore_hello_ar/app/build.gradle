@@ -30,8 +30,9 @@ repositories {
 }
 
 dependencies {
-    compile (name: 'arcore_client', ext: 'aar')
-    compile (name: 'obj-0.2.1', ext: 'jar')
+    compile(name: 'arcore_client', ext: 'aar')
+    compile(name: 'obj-0.2.1', ext: 'jar')
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

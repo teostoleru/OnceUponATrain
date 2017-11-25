@@ -30,6 +30,8 @@ import com.google.ar.core.examples.java.helloar.rendering.PlaneAttachment;
 import com.google.ar.core.examples.java.helloar.rendering.PlaneRenderer;
 import com.google.ar.core.examples.java.helloar.rendering.PointCloudRenderer;
 
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -335,5 +337,20 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
                 mLoadingMessageSnackbar = null;
             }
         });
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            launchActivity();
+        }
+    }
+
+    private void launchActivity() {
+        Intent intent = new Intent(this, StoryActivity.class);
+        startActivity(intent);
     }
 }
