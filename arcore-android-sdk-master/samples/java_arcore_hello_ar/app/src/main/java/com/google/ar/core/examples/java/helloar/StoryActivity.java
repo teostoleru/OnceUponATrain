@@ -15,13 +15,19 @@ import java.util.List;
 
 public class StoryActivity extends AppCompatActivity {
 
-    private GeofencingClient mGeofencingClient;
+    private GeofencingClient geofencingClient;
 
     Geofence geofence = new Geofence.Builder()
             .setRequestId("abc") // Geofence ID
             .setCircularRegion( 1111, 1111, 1000) // defining fence region
             // Transition types that it should look for
             .setTransitionTypes( Geofence.GEOFENCE_TRANSITION_EXIT)
+            .build();
+
+    GeofencingRequest request = new GeofencingRequest.Builder()
+            // Notification to trigger when the Geofence is created
+            .setInitialTrigger( GeofencingRequest.INITIAL_TRIGGER_ENTER )
+            .addGeofence( geofence ) // add a Geofence
             .build();
 
     @Override
