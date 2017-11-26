@@ -238,7 +238,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
                     if (hit instanceof PlaneHitResult && ((PlaneHitResult) hit).isHitInPolygon()) {
                         // Cap the number of objects created. This avoids overloading both the
                         // rendering system and ARCore.
-                        if (mTouches.size() >= 16) {
+                        if (mTouches.size() >= 1) {
                             mSession.removeAnchors(Arrays.asList(mTouches.get(0).getAnchor()));
                             mTouches.remove(0);
                         }
