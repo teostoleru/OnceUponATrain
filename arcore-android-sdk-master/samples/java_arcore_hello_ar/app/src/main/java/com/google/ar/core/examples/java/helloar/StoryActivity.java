@@ -26,4 +26,5 @@ public class StoryActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HelloArActivity.class);
         startActivity(intent);
     }
+
 }
