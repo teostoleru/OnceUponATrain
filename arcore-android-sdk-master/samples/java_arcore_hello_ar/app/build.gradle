@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.google.ar.core.examples.java.helloar"
@@ -27,7 +27,11 @@ repositories {
     flatDir {
         dirs './libs', '../../../libraries'
     }
+
+    maven { url "https://maven.google.com" }
 }
+
+
 
 dependencies {
     compile(name: 'arcore_client', ext: 'aar')
@@ -35,4 +39,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.android.support:design:25.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-location:11.6.0'
 }
