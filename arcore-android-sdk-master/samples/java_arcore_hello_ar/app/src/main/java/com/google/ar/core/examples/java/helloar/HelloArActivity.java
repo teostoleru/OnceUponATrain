@@ -195,10 +195,10 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
             mVirtualObject.createOnGlThread(/*context=*/this, "andy.obj", "andy.png");
             mVirtualObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
 
-            mVirtualObjectShadow.createOnGlThread(/*context=*/this,
-                "andy_shadow.obj", "andy_shadow.png");
-            mVirtualObjectShadow.setBlendMode(BlendMode.Shadow);
-            mVirtualObjectShadow.setMaterialProperties(1.0f, 0.0f, 0.0f, 1.0f);
+            // mVirtualObjectShadow.createOnGlThread(/*context=*/this,
+            //     "andy_shadow.obj", "andy_shadow.png");
+            // mVirtualObjectShadow.setBlendMode(BlendMode.Shadow);
+            // mVirtualObjectShadow.setMaterialProperties(1.0f, 0.0f, 0.0f, 1.0f);
         } catch (IOException e) {
             Log.e(TAG, "Failed to read obj file");
         }
