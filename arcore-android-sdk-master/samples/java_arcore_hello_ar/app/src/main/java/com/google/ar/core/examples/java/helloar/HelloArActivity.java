@@ -193,6 +193,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
         // Prepare the other rendering objects.
         try {
             mVirtualObject.createOnGlThread(/*context=*/this, "viking.obj", "viking.png");
+            // mVirtualObject.createOnGlThread(/*context=*/this, "PonteDeTijolos.obj", "PonteDeTijolosTextura.jpg");
             mVirtualObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f);
 
             // mVirtualObjectShadow.createOnGlThread(/*context=*/this,
